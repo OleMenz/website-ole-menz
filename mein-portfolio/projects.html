@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekte – Ole Menz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Ole<span>.</span>dev</a>
+    <button class="nav-toggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projekte</a></li>
+      <li><a href="contact.html" class="nav-cta">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <div class="section-label">Was ich gebaut habe</div>
+      <h1 class="section-title">
+        Meine <span style="color:var(--accent)">Projekte</span>
+      </h1>
+      <p style="color:var(--muted); max-width:520px;">
+        Diese Projekte sind persönliche Lernprojekte, die ich in meiner Freizeit
+        umgesetzt habe. Kein Profi-Code – aber echte Leidenschaft dahinter.
+      </p>
+    </div>
+
+    <section style="padding-top:0;">
+
+      <!-- Notice Banner -->
+      <div class="card reveal" style="
+        margin-bottom:3rem;
+        border-color:rgba(108,99,255,0.3);
+        background: rgba(108,99,255,0.05);
+        display:flex; align-items:flex-start; gap:1rem;">
+        <div style="font-size:1.4rem; flex-shrink:0;">💡</div>
+        <div>
+          <strong style="display:block; margin-bottom:0.3rem; font-family:'Syne',sans-serif;">Ehrliche Einordnung</strong>
+          <p style="color:var(--muted); font-size:0.875rem;">
+            Ich stehe am Anfang meiner IT-Reise. Die folgenden Projekte sind Lern-
+            und Übungsprojekte. Sie zeigen, dass ich aktiv dazulerne – nicht, dass
+            ich bereits Profi-Entwickler bin. Genau das möchte ich in einer
+            Ausbildung werden.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Cards -->
+      <div class="grid-2" style="margin-bottom:3rem;">
+
+        <div class="card reveal" data-delay="0">
+          <div style="
+            height:160px;
+            border-radius:8px;
+            background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,229,195,0.08));
+            border: 1px solid var(--border);
+            display:flex; align-items:center; justify-content:center;
+            margin-bottom:1.5rem;
+            font-size:3rem;
+            position:relative; overflow:hidden;">
+            🌐
+            <div style="
+              position:absolute; bottom:0.75rem; right:0.75rem;
+              font-family:'DM Mono',monospace; font-size:0.65rem;
+              color:var(--muted); letter-spacing:0.05em;">
+              HTML · CSS · JS
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+            <h3 style="font-family:'Syne',sans-serif; font-weight:700;">Persönliche Website</h3>
+            <span class="tag tag-accent2" style="font-size:0.65rem;">Dieses Projekt</span>
+          </div>
+          <p style="color:var(--muted); font-size:0.85rem; margin-bottom:1.2rem;">
+            Diese Website hier – mein erstes eigenes Webprojekt. Ich habe HTML,
+            CSS und JavaScript von Grund auf gelernt und umgesetzt.
+            Responsiv, mit Dark Mode und sauberem Code-Aufbau.
+          </p>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="card reveal" data-delay="100">
+          <div style="
+            height:160px;
+            border-radius:8px;
+            background: linear-gradient(135deg, rgba(0,229,195,0.1), rgba(108,99,255,0.06));
+            border: 1px solid var(--border);
+            display:flex; align-items:center; justify-content:center;
+            margin-bottom:1.5rem;
+            font-size:3rem;
+            position:relative; overflow:hidden;">
+            🐍
+            <div style="
+              position:absolute; bottom:0.75rem; right:0.75rem;
+              font-family:'DM Mono',monospace; font-size:0.65rem;
+              color:var(--muted); letter-spacing:0.05em;">
+              Python
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+            <h3 style="font-family:'Syne',sans-serif; font-weight:700;">Python Übungsprojekte</h3>
+            <span class="tag" style="font-size:0.65rem;">Lernprojekt</span>
+          </div>
+          <p style="color:var(--muted); font-size:0.85rem; margin-bottom:1.2rem;">
+            Verschiedene kleine Python-Skripte: Taschenrechner, einfache Spiele,
+            Datenverarbeitung. Ich nutze Python aktiv, um Logik und Denkstrukturen
+            zu verstehen.
+          </p>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <span class="tag">Python</span>
+            <span class="tag">Logik</span>
+            <span class="tag">Algorithmen</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="reveal card" data-delay="200" style="
+        border-style:dashed;
+        border-color:rgba(108,99,255,0.25);
+        text-align:center; padding:3rem 2rem;">
+        <div style="font-size:2.5rem; margin-bottom:1rem;">🚀</div>
+        <h3 style="font-family:'Syne',sans-serif; font-weight:700; margin-bottom:0.5rem;">
+          Mehr folgt bald
+        </h3>
+        <p style="color:var(--muted); max-width:400px; margin:0 auto;">
+          Ich arbeite laufend an neuen Projekten. Ziel ist es, bald ein echtes
+          Web-App-Projekt vorweisen zu können – mit Backend und Datenbank.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ole Menz</p>
+    <ul class="footer-links">
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
