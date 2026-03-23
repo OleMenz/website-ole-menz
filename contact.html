@@ -114,47 +114,41 @@
             Nachricht schreiben
           </h2>
 
-          <form action="https://formspree.io/f/mreywvdv" method="POST">
-            <div class="form-group">
-              <label for="name">Ihr Name</label>
-              <input type="text" id="name" name="name" placeholder="Max Mustermann" autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="email">E-Mail-Adresse</label>
-              <input type="email" id="email" name="email" placeholder="max@beispiel.ch" autocomplete="email" />
-            </div>
-            <div class="form-group">
-              <label for="company">Unternehmen <span style="color:var(--muted); font-size:0.7rem;">(optional)</span></label>
-              <input type="text" id="company" name="company" placeholder="Muster AG" />
-            </div>
-            <div class="form-group">
-              <label for="message">Ihre Nachricht</label>
-              <textarea id="message" name="message" placeholder="Hallo Ole, wir haben einen Ausbildungsplatz als..."></textarea>
-            </div>
+          <div class="form-group">
+            <label for="name">Ihr Name</label>
+            <input type="text" id="c-name" placeholder="Max Mustermann" />
+          </div>
+          <div class="form-group">
+            <label for="company">Unternehmen <span style="color:var(--muted); font-size:0.7rem;">(optional)</span></label>
+            <input type="text" id="c-company" placeholder="Muster AG" />
+          </div>
+          <div class="form-group">
+            <label for="message">Ihre Nachricht</label>
+            <textarea id="c-message" placeholder="Hallo Ole, wir haben einen Ausbildungsplatz als..."></textarea>
+          </div>
 
-            <button type="submit" style="
-              display:block;
-              width:100%;
-              padding:1rem;
-              background:#6c63ff;
-              color:white;
-              border:none;
-              border-radius:12px;
-              cursor:pointer;
-              font-family:'DM Mono',monospace;
-              font-size:0.9rem;
-              font-weight:500;
-              text-align:center;
-              transition: background 0.3s, transform 0.3s;
-            "
-            onmouseover="this.style.background='#5a52d4'; this.style.transform='translateY(-2px)'"
-            onmouseout="this.style.background='#6c63ff'; this.style.transform='translateY(0)'">
-              Nachricht senden →
-            </button>
-          </form>
+          <button onclick="sendMail()" style="
+            display:block;
+            width:100%;
+            padding:1rem;
+            background:#6c63ff;
+            color:white;
+            border:none;
+            border-radius:12px;
+            cursor:pointer;
+            font-family:'DM Mono',monospace;
+            font-size:0.9rem;
+            font-weight:500;
+            text-align:center;
+            transition: background 0.3s, transform 0.3s;
+          "
+          onmouseover="this.style.background='#5a52d4'; this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.background='#6c63ff'; this.style.transform='translateY(0)'">
+            Nachricht senden →
+          </button>
 
           <p style="color:var(--muted); font-size:0.75rem; margin-top:1rem; text-align:center;">
-            Ihre Daten werden nicht gespeichert oder weitergegeben.
+            Öffnet Ihr E-Mail-Programm mit der Nachricht vorausgefüllt.
           </p>
         </div>
 
@@ -167,5 +161,22 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    function sendMail() {
+      const name    = document.getElementById('c-name').value.trim();
+      const company = document.getElementById('c-company').value.trim();
+      const message = document.getElementById('c-message').value.trim();
+
+      if (!name || !message) {
+        alert('Bitte Name und Nachricht ausfüllen.');
+        return;
+      }
+
+      const subject = encodeURIComponent('Kontaktanfrage von ' + name + (company ? ' (' + company + ')' : ''));
+      const body    = encodeURIComponent(message + '\n\n– ' + name + (company ? ', ' + company : ''));
+
+      window.location.href = 'mailto:ole.menz@bluewin.ch?subject=' + subject + '&body=' + body;
+    }
+  </script>
 </body>
 </html>
