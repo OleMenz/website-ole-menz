@@ -756,3 +756,7 @@ footer p { color: var(--muted); font-size: 0.8rem; }
   position: relative;
   z-index: 10;
 }
+.cursor-dot,
+.cursor-ring {
+  display: none !important;
+}
