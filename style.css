@@ -750,3 +750,9 @@ footer p { color: var(--muted); font-size: 0.8rem; }
 @keyframes blink {
   50% { opacity: 0; }
 }
+.form-group input,
+.form-group textarea {
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+}
