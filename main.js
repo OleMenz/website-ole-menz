@@ -139,37 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  /* ── Contact Form ── */
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      const btn = form.querySelector('button[type="submit"]');
-      const name    = form.querySelector('#name').value.trim();
-      const email   = form.querySelector('#email').value.trim();
-      const message = form.querySelector('#message').value.trim();
-
-      if (!name || !email || !message) {
-        showToast('Bitte alle Felder ausfüllen.', 'error');
-        return;
-      }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showToast('Bitte eine gültige E-Mail-Adresse eingeben.', 'error');
-        return;
-      }
-
-      btn.textContent = 'Wird gesendet…';
-      btn.disabled = true;
-
-      // Simulate send (replace with real endpoint)
-      setTimeout(() => {
-        showToast('Nachricht erfolgreich gesendet! Ich melde mich bald.', 'success');
-        form.reset();
-        btn.textContent = 'Nachricht senden';
-        btn.disabled = false;
-      }, 1200);
-    });
-  }
-
   /* ── Toast Notification ── */
   function showToast(msg, type = 'success') {
     const existing = document.querySelector('.toast');
