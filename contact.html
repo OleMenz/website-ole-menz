@@ -113,21 +113,7 @@
           <h2 style="font-family:'Syne',sans-serif; font-weight:700; font-size:1.1rem; margin-bottom:1.5rem;">
             Nachricht schreiben
           </h2>
-<form
-  action="https://formspree.io/f/mreywvdv"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+
           <form id="contact-form" action="https://formspree.io/f/mreywvdv" method="POST">
             <div class="form-group">
               <label for="name">Ihr Name</label>
@@ -150,7 +136,22 @@
               Nachricht senden →
             </button>
           </form>
-
+            <div> <form
+  action="https://formspree.io/f/mreywvdv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+            </div>
           <p style="color:var(--muted); font-size:0.75rem; margin-top:1rem; text-align:center;">
             Ihre Daten werden nicht gespeichert oder weitergegeben.
           </p>
