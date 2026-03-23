@@ -113,7 +113,21 @@
           <h2 style="font-family:'Syne',sans-serif; font-weight:700; font-size:1.1rem; margin-bottom:1.5rem;">
             Nachricht schreiben
           </h2>
-
+<form
+  action="https://formspree.io/f/mreywvdv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
           <form id="contact-form" action="https://formspree.io/f/mreywvdv" method="POST">
             <div class="form-group">
               <label for="name">Ihr Name</label>
