@@ -163,9 +163,9 @@
   </footer>
 
   <script src="main.js"></script>
-  <script>
-  document.querySelector('form').addEventListener('click', function() {
-    this.submit();
+ <script>
+  document.querySelector('input[type="submit"]').addEventListener('click', function() {
+    document.querySelector('form').submit();
   });
 </script>
 </body>
